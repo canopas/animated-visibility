@@ -25,7 +25,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
-
   final String title;
 
   @override
@@ -64,28 +63,28 @@ class _MyHomePageState extends State<MyHomePage> {
                       exit: fadeOut() + scaleOut())),
               _body("Slide", _content(enter: slideIn(), exit: slideOut())),
               _body(
-                  "Slide Vertically",
-                  _content(
-                      enter: slideInVertically(),
-                      exit: slideOutVertically(targetOffsetY: -1))),
-              _body(
-                  "Slide Vertically",
+                  "Slide from top",
                   _content(
                       enter: slideInVertically(
                           initialOffsetY: -1,
                           curve: Curves.fastEaseInToSlowEaseOut),
                       exit: slideOutVertically(
+                          targetOffsetY: -1,
                           curve: Curves.fastEaseInToSlowEaseOut))),
               _body(
-                  "Slide Horizontally",
+                  "Slide from bottom",
                   _content(
-                      enter: slideInHorizontally(),
-                      exit: slideOutHorizontally())),
+                      enter: slideInVertically(), exit: slideOutVertically())),
               _body(
-                  "Slide Horizontally",
+                  "Slide from start",
                   _content(
                       enter: slideInHorizontally(initialOffsetX: -1),
                       exit: slideOutHorizontally(targetOffsetX: -1))),
+              _body(
+                  "Slide from end",
+                  _content(
+                      enter: slideInHorizontally(),
+                      exit: slideOutHorizontally())),
               _body(
                   "Expand Center Vertically",
                   _content(
