@@ -24,28 +24,36 @@ class AnimatedVisibility extends StatefulWidget {
   static const defaultEnterDuration = Duration(milliseconds: 500);
   static const defaultExitDuration = defaultEnterDuration;
 
-  const AnimatedVisibility({
+  AnimatedVisibility({
     super.key,
     this.visible = true,
     this.child = const SizedBox.shrink(),
-    this.enter,
-    this.exit,
-    this.enterDuration,
-    this.exitDuration,
-  });
+    EnterTransition? enter,
+    ExitTransition? exit,
+    Duration? enterDuration,
+    Duration? exitDuration,
+  })  : enter = enter ?? defaultEnterTransition,
+        exit = exit ?? defaultExitTransition,
+        enterDuration = enterDuration ?? defaultEnterDuration,
+        exitDuration = exitDuration ?? defaultExitDuration;
 
   /// Whether the content should be visible or not.
   final bool visible;
+
   //// The widget to apply animated effects to.
   final Widget child;
+
   /// The enter transition to be used, [fadeIn] by default.
-  final EnterTransition? enter;
+  final EnterTransition enter;
+
   /// The exit transition to be used, [fadeOut] by default.
-  final ExitTransition? exit;
+  final ExitTransition exit;
+
   /// The duration of the enter transition, 500ms by default.
-  final Duration? enterDuration;
+  final Duration enterDuration;
+
   /// The duration of the exit transition, 500ms by default.
-  final Duration? exitDuration;
+  final Duration exitDuration;
 
   @override
   State<AnimatedVisibility> createState() => _AnimatedVisibilityState();
@@ -59,8 +67,8 @@ class _AnimatedVisibilityState extends State<AnimatedVisibility>
   void initState() {
     _controller = AnimationController(
       value: widget.visible ? 1.0 : 0.0,
-      duration: AnimatedVisibility.defaultEnterDuration,
-      reverseDuration: AnimatedVisibility.defaultExitDuration,
+      duration: widget.enterDuration,
+      reverseDuration: widget.exitDuration,
       vsync: this,
     )..addStatusListener((AnimationStatus status) {
         setState(() {});
@@ -86,10 +94,8 @@ class _AnimatedVisibilityState extends State<AnimatedVisibility>
       builder: (BuildContext context, Widget? child) {
         return AnimatedTransition(
           animation: _controller,
-          enterTransition:
-              widget.enter ?? AnimatedVisibility.defaultEnterTransition,
-          exitTransition:
-              widget.exit ?? AnimatedVisibility.defaultExitTransition,
+          enterTransition: widget.enter,
+          exitTransition: widget.exit,
           child: child,
         );
       },
