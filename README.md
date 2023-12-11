@@ -8,7 +8,7 @@ Animate appearance and disappearance using pre-built effects with the AnimatedVi
 In the pubspec.yaml of your flutter project, add the following dependency:
 ```
 dependencies:
-  nimated_visibility_widget: <latest_version>
+  animated_visibility_widget: <latest_version>
 ```
 In your library add the following import:
 
