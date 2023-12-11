@@ -2,7 +2,7 @@
 
 Animate appearance and disappearance using pre-built effects with the AnimatedVisibility widget.
 
-<img src="./gif/gif1.gif?raw=true" height="540" /> <img src="./gif/gif2.gif?raw=true" height="540" />
+<img src="https://raw.githubusercontent.com/canopas/animated-visibility-widget/main/gif/gif1.gif" height="540" /> <img src="https://raw.githubusercontent.com/canopas/animated-visibility-widget/main/gif/gif2.gif" height="540" />
 
 # Getting Started
 In the pubspec.yaml of your flutter project, add the following dependency:
