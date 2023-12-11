@@ -1,3 +1,6 @@
+## 0.0.3
+* Readme fixes
+
 ## 0.0.2
 * Readme fixes
 
