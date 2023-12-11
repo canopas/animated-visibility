@@ -1,39 +1,39 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Flutter Animated Visibility Widget
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+Animate appearance and disappearance using pre-built effects with the AnimatedVisibility widget.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+<img src="./gif/gif1.gif" height="540" />
+<img src="./gif/gif2.gif" height="540" />
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# Getting Started
+In the pubspec.yaml of your flutter project, add the following dependency:
+```
+dependencies:
+  nimated_visibility_widget: <latest_version>
+```
+In your library add the following import:
 
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+```
+import 'package:animated_visibility_widget/animated_visibility_widget.dart';
 ```
 
-## Additional information
+### Basic usage
+```
+      AnimatedVisibility(
+        visible: _isShow,
+        enter: fadeIn() + scaleIn(),
+        exit: fadeOut() + slideOutHorizontally(),
+        child: <content to show/hide>,
+      );
+```
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+# Demo
+[Sample](https://github.com/canopas/animated-visibility-widget/tree/main/example) app demonstrates how simple the usage of the library actually is.
+
+# Bugs and Feedback
+For bugs, questions and discussions please use the [Github Issues](https://github.com/canopas/animated-visibility-widget/issues).
+
+# Credits
+
+`animated_visibility` is owned and maintained by the [Canopas team](https://canopas.com/). You can follow them on Twitter at [@canopassoftware](https://twitter.com/canopassoftware) for project updates and releases.
+

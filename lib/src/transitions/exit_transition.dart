@@ -1,6 +1,4 @@
 import 'package:animated_visibility_widget/src/transitions/transition_data.dart';
-import 'package:flutter/animation.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 /// ExitTransition defines how an AnimatedVisibility Widget disappears from screen as it becomes invisible.

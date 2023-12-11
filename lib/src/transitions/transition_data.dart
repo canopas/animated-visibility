@@ -1,5 +1,3 @@
-import 'package:flutter/animation.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 
 @immutable
