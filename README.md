@@ -1,4 +1,4 @@
-# Flutter Animated Visibility Widget
+# Animated Visibility
 
 Animate appearance and disappearance using pre-built effects with the AnimatedVisibility widget.
 
@@ -8,12 +8,12 @@ Animate appearance and disappearance using pre-built effects with the AnimatedVi
 In the pubspec.yaml of your flutter project, add the following dependency:
 ```
 dependencies:
-  animated_visibility_widget: <latest_version>
+  animated_visibility: <latest_version>
 ```
 In your library add the following import:
 
 ```
-import 'package:animated_visibility_widget/animated_visibility_widget.dart';
+import 'package:animated_visibility/animated_visibility.dart';
 ```
 
 ### Basic usage
@@ -27,10 +27,10 @@ import 'package:animated_visibility_widget/animated_visibility_widget.dart';
 ```
 
 # Demo
-[Sample](https://github.com/canopas/animated-visibility-widget/tree/main/example) app demonstrates how simple the usage of the library actually is.
+[Sample](https://github.com/canopas/animated-visibility/tree/main/example) app demonstrates how simple the usage of the library actually is.
 
 # Bugs and Feedback
-For bugs, questions and discussions please use the [Github Issues](https://github.com/canopas/animated-visibility-widget/issues).
+For bugs, questions and discussions please use the [Github Issues](https://github.com/canopas/animated-visibility/issues).
 
 # Credits
 

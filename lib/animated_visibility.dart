@@ -1,4 +1,4 @@
-library animated_visibility_widget;
+library animated_visibility;
 
 export 'src/animated_visibility.dart';
 export 'src/animated_transition.dart';

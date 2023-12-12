@@ -1,4 +1,4 @@
-import 'package:animated_visibility_widget/src/transitions/transition_data.dart';
+import 'package:animated_visibility/src/transitions/transition_data.dart';
 import 'package:flutter/material.dart';
 
 /// EnterTransition defines how an AnimatedVisibility Widget appears on screen as it becomes visible.

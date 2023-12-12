@@ -1,6 +1,6 @@
-import 'package:animated_visibility_widget/src/transitions/enter_transition.dart';
-import 'package:animated_visibility_widget/src/transitions/exit_transition.dart';
-import 'package:animated_visibility_widget/src/transitions/transition_data.dart';
+import 'package:animated_visibility/src/transitions/enter_transition.dart';
+import 'package:animated_visibility/src/transitions/exit_transition.dart';
+import 'package:animated_visibility/src/transitions/transition_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -80,8 +80,6 @@ class AnimatedTransition extends StatelessWidget {
         child: animatedChild,
       );
     }
-
-
 
     if (data.opacity != null) {
       final fade = data.opacity!;

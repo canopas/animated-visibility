@@ -1,6 +1,6 @@
-import 'package:animated_visibility_widget/src/animated_transition.dart';
-import 'package:animated_visibility_widget/src/transitions/enter_transition.dart';
-import 'package:animated_visibility_widget/src/transitions/exit_transition.dart';
+import 'package:animated_visibility/src/animated_transition.dart';
+import 'package:animated_visibility/src/transitions/enter_transition.dart';
+import 'package:animated_visibility/src/transitions/exit_transition.dart';
 import 'package:flutter/widgets.dart';
 
 /// AnimatedVisibility is a widget that animate the appearance and disappearance of its content, as [visible] value changes.
